@@ -12,13 +12,12 @@
 - Update quantities or remove books from the cart
 - User authentication (sign up, log in, log out)
 - Responsive and clean user interface with Flexbox layout
-
-
+  
 ### Prerequisites
 
-- Python 3.x
+- Python 3.x installed on your system
 - Django 3.x or 4.x
-- Virtual environment (optional, but recommended)
+- Virtual environment (recommended)
 
 ### Installation
 
@@ -32,8 +31,8 @@
 2. **Create and activate a virtual environment:**
 
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    python -m venv venv
+    venv\Scripts\activate
     ```
 
 3. **Install dependencies:**
@@ -42,13 +41,13 @@
     pip install django
     ```
 
-4. **Apply migrations:**
+4. **Apply migrations to set up the database:**
 
     ```bash
     python manage.py migrate
     ```
 
-5. **Create a superuser (optional for admin access):**
+5. **Create a superuser for admin access (optional but recommended):**
 
     ```bash
     python manage.py createsuperuser
