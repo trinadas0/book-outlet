@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %} 
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'books/styles.css' %}">
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <img src="{{ book.image.url }}" alt="{{ book.title }}" style="width:300px;">
+    <p>{{ book.description }}</p>
+    <p><strong>Price:</strong> ${{ book.price }}</p>
+    <a href="{% url 'book_list' %}">Back to Book List</a>
+
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="{% url 'book_detail' book.pk %}">
+                    <img src="{{ book.image.url }}" alt="{{ book.title }}">
+                    <h2>{{ book.title }}</h2>
+                    <p>${{ book.price }}</p>
+                </a>
+                <a href="{% url 'add_to_cart' book.id %}" class="btn">Add to Cart</a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

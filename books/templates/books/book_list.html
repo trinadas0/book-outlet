@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Available Books{% endblock %}
+
+{% block content %}
+<h1>Available Books</h1>
+<ul>
+    {% for book in books %}
+        <li>
+            <a href="{% url 'book_detail' book.pk %}">
+                <img src="{{ book.image.url }}" alt="{{ book.title }}">
+                <h2>{{ book.title }}</h2>
+                <p>${{ book.price }}</p>
+            </a>
+            <a href="{% url 'add_to_cart' book.id %}" class="btn">Add to Cart</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
