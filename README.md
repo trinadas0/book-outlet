@@ -1,8 +1,8 @@
-# Book Outlet - Django Online Bookstore
+# Book Outlet using Django
 
 ## Overview
 
-**Book Outlet** is an online bookstore built with Django. Users can browse books, add them to their cart, and manage their shopping experience with features like quantity updates and deletion of items from the cart. The application includes user authentication, allowing users to sign up, log in, log out, and manage their cart securely.
+**Book Outlet** is a bookstore built with Django. Users can browse books, add them to their cart, and manage their shopping experience with features like quantity updates and deletion of items from the cart. The application includes user authentication, allowing users to sign up, log in, log out, and manage their cart securely.
 
 ## Features
 
